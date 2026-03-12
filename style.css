@@ -454,80 +454,136 @@ h1 {
   border: 1px solid #333;
 }
 /* Final CTA Section */
-.final-cta {
+.split-contact-section {
   background-color: #12100e;
-  padding: 120px 0 0 0; /* No bottom padding because of the bar */
-  text-align: center;
+  border-top: 1px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
 }
 
-.cta-content {
-  padding-bottom: 100px;
+.split-container {
+  display: flex !important;
+  flex-direction: row;
+  min-height: 80vh;
+}
+
+/* LEFT SIDE: Original Design */
+.contact-text-side {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Original centering */
+  border-right: 1px solid #2a2a2a;
 }
 
 .cta-heading {
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
-  color: #fff;
   margin-bottom: 20px;
-  line-height: 1.1;
+  color: #fff;
 }
 
 .cta-subtext {
-  font-size: 1.2rem;
-  color: #a3a3a3;
-  max-width: 600px;
-  margin: 0 auto 50px;
+  color: #888;
+  max-width: 450px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
 }
 
-/* Social Circles */
 .cta-socials {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .social-circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   border: 1px solid #333;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
-.social-circle:hover {
-  border-color: #ff7e5f; /* Coral accent */
-  color: #ff7e5f;
-  transform: translateY(-5px);
+/* RIGHT SIDE: Vertical Orange Form */
+.contact-form-side {
+  flex: 1;
+  padding: 60px;
+  background-color: #161412;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Bottom Footer Bar */
+.split-form { width: 100%; max-width: 400px; }
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #ff7e5f; /* Orange Headings */
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.input-group input, 
+.input-group textarea {
+  background: #1a1816;
+  border: 1px solid #2a2a2a;
+  padding: 12px;
+  border-radius: 6px;
+  color: #fff;
+  font-family: inherit;
+  outline: none;
+}
+
+.input-group textarea {
+  min-height: 80px; /* Less space as requested */
+  resize: none;
+}
+
+.submit-btn-styled {
+  background: #ff7e5f;
+  color: #12100e;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* FOOTER: Kept as before */
 .bottom-bar {
-  border-top: 1px solid #1e1c1a;
-  padding: 30px 0;
-  font-size: 14px;
-  color: #555;
+  width: 100%;
+  padding: 30px 60px;
+  background-color: #12100e; /* Reverted to match left side */
+  border-top: 1px solid #333; /* Slightly brighter line to define the edge */
 }
 
-.bar-flex {
+.bar-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-@media (max-width: 600px) {
-  .bar-flex {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-  
-  .cta-heading {
-    font-size: 2.5rem;
-  }
+.bottom-bar span {
+  color: #eee; /* This is much brighter (off-white) */
+}
+
+/* Mobile logic */
+@media (max-width: 992px) {
+  .split-container { flex-direction: column; }
+  .contact-text-side { border-right: none; border-bottom: 1px solid #2a2a2a; }
 }
