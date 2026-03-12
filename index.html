@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Designer & Developer</title>
+  <title>Portfolio - Meghana Jayashankar</title>
+  <link rel="icon" type="image/png" href="logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -42,8 +43,8 @@
     <div class="about-right">
       <div class="about-description">
         <p>Hi, I’m Meghana, i'm a first year student at PES University majoring in Computer Science. I’m a curious and passionate tech enthusiast who enjoys exploring different areas of technology and turning ideas into practical solutions. 
-I enjoy working on projects that challenge me to think logically, learn new tools, and experiment with different technologies. Whether it’s developing applications, learning new programming concepts, or improving my technical skills, I’m always excited to explore and grow in the tech space. 
-</p>
+          I enjoy working on projects that challenge me to think logically, learn new tools, and experiment with different technologies. Whether it’s developing applications, learning new programming concepts, or improving my technical skills, I’m always excited to explore and grow in the tech space. 
+        </p>
       </div>
 
       <div class="stats-grid">
@@ -173,32 +174,51 @@ I enjoy working on projects that challenge me to think logically, learn new tool
     </div>
   </div>
 </section>
-<section id="contact" class="final-cta">
-  <div class="container cta-content">
-    <h2 class="cta-heading">Let’s work <span class="accent">together.</span></h2>
-    <p class="cta-subtext">Have a project in mind? I’d love to hear about it. Get in touch and let’s create something remarkable.</p>
+<<section id="contact" class="split-contact-section">
+  <div class="split-container">
+    
+    <div class="contact-text-side">
+      <div class="cta-content">
+        <h2 class="cta-heading">Let’s work <span class="accent">together.</span></h2>
+        <p class="cta-subtext">Have a project in mind? I’d love to hear about it. Get in touch and let’s create something remarkable.</p>
+        
+        <div class="cta-socials">
+          <a href="mailto:jayashankar.meghana26@gmail.com" class="social-circle"><i class="fa-regular fa-envelope"></i></a>
+          <a href="https://github.com/meghanajayashankar/" class="social-circle"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/meghanajayashankar/" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
 
-    <div class="cta-socials">
-      <a href="mailto:jayashankar.meghana26@gmail.com" class="social-circle" aria-label="Email">
-        <i class="fa-regular fa-envelope"></i>
-      </a>
-      <a href="https://github.com/meghanajayashankar/" class="social-circle" aria-label="GitHub">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/meghanajayashankar/" class="social-circle" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
+    <div class="contact-form-side">
+      <form action="http://127.0.0.1:5000/submit" method="POST" class="split-form">
+        <div class="input-group">
+          <label>NAME</label>
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        
+        <div class="input-group">
+          <label>EMAIL</label>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="input-group">
+          <label>MESSAGE</label>
+          <textarea name="message" rows="3" placeholder="Tell me about your project..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn-styled">Send Message</button>
+      </form>
     </div>
   </div>
 
   <footer class="bottom-bar">
-    <div class="container bar-flex">
+    <div class="bar-content">
       <span>© 2026 Portfolio. All rights reserved.</span>
       <span class="credit">Built with passion & precision.</span>
     </div>
   </footer>
 </section>
-    
-
+</div>
 </body>
 </html>
